@@ -13,12 +13,12 @@ for($i=0;$i<count($seeds);$i++){
     }
 }
 function check($key){
-    $saltkey = 'u4IrIo51';
+    $saltkey = 'Y3ltot2Z';
     for($i=0;$i<16777215;$i++){
         if($i%1000000==0){
             echo ".";
         }
-        if(substr(md5('6380'.md5(pad($i).$key.$saltkey)),8,18)=='a1420cf047f63f9b4b'){
+        if(substr(md5('6750'.md5(pad($i).$key.$saltkey)),8,18)=='9cba1661caa30f4dd3'){
         //90=ssid.$_G['uid'] ssid来自seccode 9 uid是0
             echo "\nFound key:".pad($i).$key;
             die();
